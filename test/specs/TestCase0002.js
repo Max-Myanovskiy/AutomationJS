@@ -10,5 +10,5 @@ describe('My Login application.', () => {
         await expect(SecurePage.flashAlert).toBeExisting();
         await expect(SecurePage.flashAlert).toHaveTextContaining('Epic sadface: Username and password do not match any user in this service');
         await browser.pause(2000);
-    })
-})
+    });
+});

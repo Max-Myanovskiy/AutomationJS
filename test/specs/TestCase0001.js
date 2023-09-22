@@ -8,5 +8,5 @@ describe('My Login application.', () => {
         await LoginPage.click();
         await expect(browser).toHaveUrlContaining('inventory');
         await browser.pause(2000);
-    })
-})
+    });
+});
