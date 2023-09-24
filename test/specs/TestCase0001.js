@@ -1,7 +1,7 @@
 import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.page.js'
 
-describe('My Login application.', () => {
+describe('Valid Login.', () => {
     it('Should login with valid credentials.', async () => {
         await LoginPage.open();
         await LoginPage.login('standard_user', 'secret_sauce');

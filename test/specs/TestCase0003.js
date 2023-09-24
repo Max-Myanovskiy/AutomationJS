@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.page.js'
 import SecurePage from '../pageobjects/secure.page.js'
 
-describe('My Login application.', () => {
+describe('Login with invalid login.', () => {
     it('Login with invalid login. Should display the error message.', async () => {
         await LoginPage.open();
         await LoginPage.login('Superman', 'secret_sauce');

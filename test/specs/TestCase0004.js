@@ -2,8 +2,8 @@ import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.page.js'
 import Menu from '../pageobjects/menu.js'
 
-describe('My Login application.', () => {
-    it('Logout.', async () => {
+describe('Logout.', () => {
+    it('User are redirecred to the "Login" page, "Username" and "Password" fields are empty.', async () => {
         await LoginPage.open();
         await LoginPage.login('standard_user', 'secret_sauce');
         await LoginPage.click();

@@ -4,8 +4,8 @@ import InventoryPage from '../pageobjects/inventory.page.js'
 import Menu from '../pageobjects/menu.js'
 import CartPage from '../pageobjects/cart.page.js'
 
-describe('My Login application.', () => {
-    it('Saving the card after logout.', async () => {
+describe('Saving the card after logout.', () => {
+    it('Cart page is displayed, product are the same as was added.', async () => {
         await LoginPage.open();
         await LoginPage.login('standard_user', 'secret_sauce');
         await LoginPage.click();
@@ -18,7 +18,9 @@ describe('My Login application.', () => {
         await LoginPage.login('standard_user', 'secret_sauce');
         await LoginPage.click();  
         await expect(browser).toHaveUrlContaining('inventory');
+        await browser.pause(2000); 
         await CartPage.clickCart();
+        await expect(browser).toHaveUrlContaining('cart');
         await browser.pause(2000); 
     });
 });

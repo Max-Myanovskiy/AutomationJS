@@ -2,7 +2,7 @@ import { expect } from '@wdio/globals'
 import LoginPage from '../pageobjects/login.page.js'
 import InventoryPage from '../pageobjects/inventory.page.js'
 
-describe('My Login application.', () => {
+describe('Sorting.', () => {
     it('Sorting Products by Name (A to Z).', async () => {
         await LoginPage.open();
         await LoginPage.login('standard_user', 'secret_sauce');
