@@ -110,7 +110,7 @@ export const config = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'mocha', 'cucumber'
+    framework: ['mocha', 'cucumber'],
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -134,6 +134,8 @@ export const config = {
         ui: 'bdd',
         timeout: 60000
     },
+
+    
     //
     // =====
     // Hooks
