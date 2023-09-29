@@ -1,4 +1,4 @@
-import { $ } from '@wdio/globals'
+import { $ } from '@wdio/globals';
 import Page from './page.js';
 
 /**
@@ -8,8 +8,9 @@ class SecurePage extends Page {
     /**
      * define selectors using getter methods
      */
-    get flashAlert () {
-        return $('div[class="error-message-container error"]');
+    get flashAlert() {
+        // return $('div[class="error-message-container error"]');
+        return $('h3[data-test="error"]');
     }
 }
 

@@ -25,14 +25,14 @@ class LoginPage extends Page {
      * e.g. to login using username and password
      */
     async login (username, password) {
-        await browser.pause(2000);
+        // await browser.pause(2000);
         await this.inputUsername.setValue(username);
-        await browser.pause(2000);
+        // await browser.pause(2000);
         await this.inputPassword.setValue(password);
     }
 
     async click () {
-        await browser.pause(2000);
+        // await browser.pause(2000);
         await this.btnLogin.click();
     }
 
