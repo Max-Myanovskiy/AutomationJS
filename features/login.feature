@@ -1,5 +1,5 @@
 Feature: Login Page
-  @login
+
   Scenario Outline: As a user, I try to log in with empty username and password fields
     Given User is located on the main page of saucedemo website
     When User click “Login” button
