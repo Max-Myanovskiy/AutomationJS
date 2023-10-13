@@ -11,6 +11,6 @@ export default class Page {
     */
     
     open (path) {
-        return browser.url(`https://www.saucedemo.com/${path}`);
+        return browser.url(`https://ultimateqa.com/simple-html-elements-for-automation/${path}`);
     }
 }

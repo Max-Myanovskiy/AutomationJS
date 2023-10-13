@@ -8,25 +8,30 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () {
-        return $('input[id="user-name"]');
+    get inputEmail () {
+        return $('input[type="email"]');
     }
 
     get inputPassword () {
-        return $('input[id="password"]');
+        return $('input[type="password"]');
     }
 
     get btnLogin () {
-        return $('input[id="login-button"]');
+        return $('button[type="submit"]');
     }
+
+    get btnClick () {
+        return $('[href="https://courses.ultimateqa.com/users/sign_in"]');
+    }
+
 
     /**
      * a method to encapsule automation code to interact with the page
      * e.g. to login using username and password
      */
-    async login (username, password) {
+    async login (email, password) {
         // await browser.pause(2000);
-        await this.inputUsername.setValue(username);
+        await this.inputEmail.setValue(email);
         // await browser.pause(2000);
         await this.inputPassword.setValue(password);
     }
@@ -34,6 +39,11 @@ class LoginPage extends Page {
     async click () {
         // await browser.pause(2000);
         await this.btnLogin.click();
+    }
+
+    async click2 () {
+        // await browser.pause(2000);
+        await this.btnClick.click();
     }
 
     /**
